@@ -4,7 +4,7 @@
 #include <vector>
 using namespace std;
 
- chek(unsigned long long arr[], unsigned long long n, unsigned long long step, unsigned long long counter[]){
+bool chek(unsigned long long arr[], unsigned long long n, unsigned long long step, unsigned long long counter[]){
     bool swapped = false;
     for (unsigned long long i = 0; i + step < n; i += step) {
         if (arr[i] > arr[i + step]) {
@@ -42,7 +42,7 @@ int main()
     for (long long i = 0; i <= 10000; i += 100){
 
         unsigned long long sze = i;
-        //cout << "Размер массива: ";
+        //cout << "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: ";
         //cin >> sze;
         unsigned long long *A = new unsigned long long[sze];
 
@@ -52,7 +52,7 @@ int main()
 
         for (unsigned long long k = 0; k < sze; k++)
         {
-            A[k] = dist(gen); // запись случайных значений целых чисел в массив
+            A[k] = dist(gen); // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
             //cout << A[k] << " | ";
         }
 
@@ -65,7 +65,7 @@ int main()
             counter[0] = 0;
 
             auto begin = chrono::steady_clock::now();
-            HairbrushSort(A, sze, counter); // сортировка
+            HairbrushSort(A, sze, counter); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             auto end = chrono::steady_clock::now();
 
             auto time_span = chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
@@ -91,7 +91,7 @@ int main()
         cout << cou[i] << ',';
     }
 
-    cout << "\nКоличество переставлений при сортировке:\n";
+    cout << "\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:\n";
     //for (unsigned long long k = 0; k < sze; k++)
     //{
     //    cout << A[k] << " | ";
